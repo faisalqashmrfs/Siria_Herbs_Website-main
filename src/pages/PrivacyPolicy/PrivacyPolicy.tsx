@@ -18,12 +18,25 @@ const PrivacyPolicy = () => {
       .get("http://127.0.0.1:8000/api/policy")
       .then((response) => {
         setPolicies(response.data.data);
-        console.log(response.data.data);
       })
       .catch((error) => {
         console.error(error);
       });
   }, []);
+
+      {/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< static arry for tisting Demo >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>></>*/}
+const StaticEvaluations  : Policy[] =  [
+  {
+    id: 1,
+    policy_number: '01',
+    title: 'string',
+    description: 'string',
+    icon: 'string',
+  },
+] 
+{/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< static arry for tisting Demo >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>></>*/}
+
+console.log();
 
   return (
     <div className="HJ_MarginSection" id="policies">

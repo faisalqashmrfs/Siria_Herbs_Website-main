@@ -45,7 +45,6 @@ const Navbar: React.FC<NavbarProps>  = ({className}) => {
     axios.get('http://127.0.0.1:8000/api/brands-published')
       .then((res) => setBrandData(res.data.data))
       .catch((err) => console.error(err))
-      .finally(() => console.log(brandData));
   }, []);
 
 
@@ -135,12 +134,12 @@ const Navbar: React.FC<NavbarProps>  = ({className}) => {
                 </a>
               </li>
               <li className={`navbar-item ${selectedItem === 'about' ? 'active' : ''}`}>
-                <Link to='/about' onClick={() => handleItemClick('about')} className='MA_font_about'>
+                <Link to='/about' onClick={() => handleItemClick('about')} >
                   من نحن
                 </Link>
               </li>
               <li className={`navbar-item ${selectedItem === 'contact' ? 'active' : ''}`}>
-                <Link to='/contact' onClick={() => handleItemClick('contact')} className='MA_Font_Contact'>
+                <Link to='/contact' onClick={() => handleItemClick('contact')}>
                   تواصل معنا
                 </Link>
               </li>

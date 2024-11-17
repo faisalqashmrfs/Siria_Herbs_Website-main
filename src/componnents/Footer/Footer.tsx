@@ -30,12 +30,10 @@ const Footer = () => {
         axios.get('http://127.0.0.1:8000/api/brands-published')
             .then((res) => setBrandData(res.data.data))
             .catch((err) => console.error(err))
-            .finally(() => console.log(brandData));
 
         axios.get('http://127.0.0.1:8000/api/contacts/1')
             .then(res => setContactData(res.data.data))
             .catch((err) => console.error(err))
-            .finally(() => console.log(contactData));
     }, []);
 
     const handeleClickOnBrand = (id: number) => {
@@ -43,7 +41,6 @@ const Footer = () => {
     }
 
     const { brandColor } = React.useContext(ColorContext);
-    console.log('brandColor is:', brandColor);
     const mystyle = {
         backgroundColor: `${brandColor}`
     }
